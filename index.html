@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>おみくじ</title>
+  <link rel="stylesheet" href="dotslide.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="btn">ガチャる</div>
+  <p>SSRは0.05未満で出ます</p>
+  <p>SRは0.2未満で出ます</p>
+  <p>RはSSR,R以外全ての数字</p>
+  <script>
+    'use strict';
+
+
+    
+      const btn = document.getElementById('btn');
+      var ssr=["SSR","SR","R"];
+      
+
+      btn.addEventListener('click', () => {
+        var gtya=(Math.random());//0-1未満をランダムに(0-)
+        if(gtya<0.05){
+          btn.textContent =ssr[0]+"=="+(gtya);
+        }else if(gtya<0.2){
+          btn.textContent =ssr[1]+"=="+gtya;
+        }else{
+          btn.textContent =ssr[2]+"=="+gtya;
+        }
+        
+      });
+    
+
+
+  </script>
+
+</body>
+</html>
