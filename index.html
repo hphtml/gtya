@@ -7,10 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
   <div id="btn">ガチャる</div>
-  <p>SSRは0.05未満で出ます</p>
-  <p>SRは0.2未満で出ます</p>
-  <p>RはSSR,R以外全ての数字</p>
+  ぜんぶで440
+  //うちＳＳＲ ２１０
+  //うちＬＲ １2
+
+  //数字の0がでればLR16号です
+  //数字の1がでればLR悟飯です
+  //数字の2～11がでれば他のLRです。
+
+  //LRは０－１１で12体としてます。
+  //１２がでてもLRではありません
+  <br>
+  <br>これからup主は、60連分ガチャって来ます（笑）
+  <br>
+  <br>60連の平均は大体1~2体でした
+  <br>
+  <br>私の未熟すぎる腕では、SSRとRの排出を別々にすることは出来ませんでした。
+  <br>お許し下さい
+  
+  
   <script>
     'use strict';
 
@@ -21,13 +38,33 @@
       
 
       btn.addEventListener('click', () => {
-        var gtya=(Math.random());//0-1未満をランダムに(0-)
-        if(gtya<0.05){
-          btn.textContent =ssr[0]+"=="+(gtya);
-        }else if(gtya<0.2){
-          btn.textContent =ssr[1]+"=="+gtya;
-        }else{
-          btn.textContent =ssr[2]+"=="+gtya;
+        var gtya=Math.floor(Math.random()*440);//0-1未満をランダムに(0-)
+        if(gtya===0){
+          btn.textContent ="LR 16号"+gtya;
+        }else if(gtya===1){
+          btn.textContent ="LR 悟飯"+gtya;
+        }else if(gtya===2){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===3){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===4){
+          btn.textContent ="LR1"+gtya;
+        }else if(gtya===5){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===6){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===7){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===8){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===9){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===10){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya===11){
+          btn.textContent ="LR!"+gtya;
+        }else if(gtya>11){
+          btn.textContent ="SSR!"+"or"+"R!"+gtya;
         }
         
       });
